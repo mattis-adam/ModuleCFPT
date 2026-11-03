@@ -23,4 +23,35 @@ public class FractionTests
 
         Assert.Equal(numerateur, f.Numerator);
     }
+
+    [Fact]
+    public void Constructeur_DenominateurZero_LeveDivideByZeroException()
+    {
+        // Arrange, Act, Assert
+        Assert.Throws<DivideByZeroException>(() => new Fraction(1, 0));
+    }
+
+    [Fact]
+    public void Constructeur_AvecDeuxEtQuatre_DonneUnSurDeux()
+    {
+        Fraction f = new Fraction(2, 4);
+        Assert.Equal(1, f.Numerator);
+        Assert.Equal(2, f.Denominator);
+    }
+
+    [Theory]
+    [InlineData(1, 2, 1, 2, 1, 2)]
+    [InlineData(1, 4, 1, 4, 1, 2)]
+    public void Add_AvecFractionsValide_DonneFractionsPrevue(int num, int denom, int num1, int denom1, int numExcepted, int denumExcepted)
+    {
+        //arrange 
+        var fraction1 = new Fraction(num, denom);
+
+        var fraction2 = new Fraction(num1, denom1);
+
+        var resultFraction = fraction1.Add(fraction2);
+
+        Assert.Equal(numExcepted, resultFraction.Numerator );
+        Assert.Equal(denumExcepted, resultFraction.Denominator );
+    }
 }

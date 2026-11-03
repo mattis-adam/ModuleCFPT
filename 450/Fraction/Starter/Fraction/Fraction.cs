@@ -66,7 +66,9 @@ namespace FractionsPourTestUnitaires
             }
             Numerator = numerator;
             Denominator = denominator;
-    }
+
+            Reduce();
+        }
 
         /// <summary>
         /// Construit une nouvelle Fraction à partir d'un double
