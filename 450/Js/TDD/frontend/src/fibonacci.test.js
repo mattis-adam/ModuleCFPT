@@ -15,19 +15,19 @@ test("GetValue_Zero_RetourneZero", () => {
 
 // Décommentez ce test quand le précédent est vert, pas avant.
 test("GetValue_Un_RetourneUn", () => {
-  Arrange
+  // Arrange
   const fb = new Fibonacci();
   const resultatAttendu = 1;
 
-  Act
+  // Act
   const resultatObtenu = fb.GetValue(1);
 
-  Assert
+  // Assert
   expect(resultatObtenu).toBe(resultatAttendu);
 });
 
 
-/* Décommentez ce test quand le précédent est vert, pas avant.
+// Décommentez ce test quand le précédent est vert, pas avant.
 test("GetValue_Deux_RetourneUn", () => {
   // Arrange
   const fb = new Fibonacci();
@@ -39,9 +39,9 @@ test("GetValue_Deux_RetourneUn", () => {
   // Assert
   expect(resultatObtenu).toBe(resultatAttendu);
 });
-*/
 
-/* Décommentez ce test quand le précédent est vert, pas avant.
+
+//Décommentez ce test quand le précédent est vert, pas avant.
 test("GetValue_Trois_RetourneDeux", () => {
   // Arrange
   const fb = new Fibonacci();
@@ -53,7 +53,7 @@ test("GetValue_Trois_RetourneDeux", () => {
   // Assert
   expect(resultatObtenu).toBe(resultatAttendu);
 });
-*/
+
 
 /* Décommentez ce test quand le précédent est vert, pas avant.
 test.each([

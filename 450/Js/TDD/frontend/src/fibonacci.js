@@ -6,7 +6,17 @@ class Fibonacci {
    * @returns {number}
    */
   GetValue(number) {
-    return number;
+    if(number == 0){
+      return 0;
+    }
+
+    if(number == 1 || number == 2){
+      return 1;
+    }
+    
+    if(number == 3){
+      return 2
+    }
   }
 }
 
