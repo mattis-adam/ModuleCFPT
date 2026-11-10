@@ -35,23 +35,23 @@ public class FractionTests
     public void Constructeur_AvecDeuxEtQuatre_DonneUnSurDeux()
     {
         Fraction f = new Fraction(2, 4);
-        Assert.Equal(1, f.Numerator);
-        Assert.Equal(2, f.Denominator);
+
+        Assert.Equal("1/2", f.ToString());
     }
 
     [Theory]
     [InlineData(1, 2, 1, 2, 1, 2)]
     [InlineData(1, 4, 1, 4, 1, 2)]
+    [InlineData(1, 2, 1, 3, 5, 6)]
     public void Add_AvecFractionsValide_DonneFractionsPrevue(int num, int denom, int num1, int denom1, int numExcepted, int denumExcepted)
     {
         //arrange 
         var fraction1 = new Fraction(num, denom);
-
         var fraction2 = new Fraction(num1, denom1);
 
+        //Act
         var resultFraction = fraction1.Add(fraction2);
 
-        Assert.Equal(numExcepted, resultFraction.Numerator );
-        Assert.Equal(denumExcepted, resultFraction.Denominator );
+        Assert.Equal($"{numExcepted}/{denumExcepted}", resultFraction.ToString());
     }
 }
