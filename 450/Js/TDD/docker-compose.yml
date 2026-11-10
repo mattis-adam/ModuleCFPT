@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build: ./frontend
+    ports: 
+      - 8080:5173
+    volumes:
+      - ./frontend:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    networks:
+      - public
+    command: sh -c "npm install --verbose && npm run dev" 
+networks:
+  public:
+volumes:
+  node_modules:
