@@ -55,7 +55,7 @@ test("GetValue_Trois_RetourneDeux", () => {
 });
 
 
-/* Décommentez ce test quand le précédent est vert, pas avant.
+// Décommentez ce test quand le précédent est vert, pas avant.
 test.each([
   [6, 8],
   [10, 55],
@@ -71,4 +71,4 @@ test.each([
   // Assert
   expect(resultatObtenu).toBe(resultatAttendu);
 });
-*/
+
