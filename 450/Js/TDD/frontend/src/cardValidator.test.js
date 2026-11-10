@@ -49,10 +49,10 @@ test("ValidateCard_Anneeprécédente_RetourneDated'expirationInvalide", () => {
     expect(resultatObtenu).toStrictEqual(resultatAttendu);
 });
 
-test("ValidateCard_CVVde2chiffres_RetourneDatedExpirationInvalide", () => {
+test("ValidateCard_CVVde2chiffres_Carteinvalide", () => {
     // Arranges
-    const carte = { nombre: "1234567812345678", mois: "12", annee: "2025", cvv: "12" }
-    const resultatAttendu = { accepte: false, message: "Carte invalide" }
+    const carte = { nombre: "1234567812345678", mois: "12", annee: "2027", cvv: "12" }
+    const resultatAttendu = { accepte: false, message: "Carte invalide"}
 
     // Act
     const resultatObtenu =  validateCard(carte.nombre, carte.mois, carte.annee, carte.cvv);
