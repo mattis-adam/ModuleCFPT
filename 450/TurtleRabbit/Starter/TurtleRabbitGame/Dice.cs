@@ -3,7 +3,7 @@
     /// <summary>
     /// Un dé réel : le résultat est aléatoire.
     /// </summary>
-    public class Dice
+    public class Dice : IDice
     {
         private Random _rnd;
 
